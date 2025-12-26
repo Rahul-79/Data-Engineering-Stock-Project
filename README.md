@@ -53,17 +53,3 @@ The entire infrastructure is **Containerized** and **Orchestrated**, simulating 
 | **Analyze** | Databricks | Large-scale Spark SQL and ML modeling |
 
 ---
-
-##  Getting Started
-
-### Prerequisites
-- Docker & Docker Compose
-- Snowflake Account (Trial works)
-- Databricks Community Edition
-- Finnhub API Key
-
-### Setup Instructions
-1. **Clone the Repo:**
-   ```bash
-   git clone [https://github.com/your-username/stock-data-pipeline.git](https://github.com/your-username/stock-data-pipeline.git)
-   cd stock-data-pipeline
