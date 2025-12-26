@@ -2,7 +2,7 @@
 # 📈 Real-Time Financial Data Lakehouse: End-to-End Engineering Pipeline
 
 <p align="center">
-  <img src="Architecture-Diagram.png" width="1000" alt="Architecture Diagram">
+  <img src="docs/Architecture-Diagram.png" width="1000" alt="Architecture Diagram">
 </p>
 
 ## Executive Summary
