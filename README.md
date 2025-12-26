@@ -2,10 +2,10 @@
 # 📈 Real-Time Financial Data Lakehouse: End-to-End Engineering Pipeline
 
 <p align="center">
-  <img src="YOUR_IMAGE_LINK_HERE" width="1000" alt="Architecture Diagram">
+  <img src="Architecture-Diagram.png" width="1000" alt="Architecture Diagram">
 </p>
 
-## 📖 Executive Summary
+## Executive Summary
 This project implements a scalable **Event-Driven Data Pipeline** designed to ingest, process, and analyze live stock market data. It leverages a **Hybrid Cloud** approach (MinIO + AWS) and follows the **Medallion Architecture** to transform raw event streams into high-value analytical assets. 
 
 The entire infrastructure is **Containerized** and **Orchestrated**, simulating a production-grade DevOps environment.
