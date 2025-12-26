@@ -12,15 +12,15 @@ The entire infrastructure is **Containerized** and **Orchestrated**, simulating 
 
 ---
 
-## 🛠️ Technical Deep Dive
+##  Technical Deep Dive
 
-### 🏗️ Ingestion & Streaming Layer (The Entry Point)
+###  Ingestion & Streaming Layer (The Entry Point)
 * **Finnhub.io API:** Serves as the high-frequency data source for live stock prices.
 * **Apache Kafka:** Acts as the distributed message broker.
     * *Implementation:* Using Kafka Topics to decouple the producer (API) from the consumer (Storage), ensuring the system can handle bursts in market volatility without crashing.
 * **MinIO (Landing Zone):** An S3-compatible object store used for local development to simulate a Cloud Data Lake. It captures the raw JSON payloads from Kafka.
 
-### ❄️ Warehouse & Transformation Layer (The Brain)
+###  Warehouse & Transformation Layer (The Brain)
 * **Snowflake:** Chosen as the Cloud Data Warehouse for its separation of storage and compute.
 * **dbt (Data Build Tool):** Manages the **SQL-based transformations** within Snowflake.
     * **Medallion Architecture Implementation:**
@@ -29,12 +29,12 @@ The entire infrastructure is **Containerized** and **Orchestrated**, simulating 
         3.  **Gold (Analytics):** Business-ready tables (e.g., 5-minute OHLC intervals, Volatility Indices).
 * **Data Testing:** Integrated dbt tests to ensure `NOT NULL` and `UNIQUE` constraints at the Silver layer.
 
-### 🚀 Analytics & AI Layer (The Output)
+###  Analytics & AI Layer (The Output)
 * **AWS S3:** Acts as the persistent storage layer for processed "Gold" data, making it accessible to external compute engines.
 * **Databricks:** Utilizes **Apache Spark** for large-scale distributed processing. 
     * *Use Case:* Performing advanced time-series analysis and predictive modeling on the refined stock data.
 
-### 🎡 DevOps & Orchestration (The Backbone)
+###  DevOps & Orchestration (The Backbone)
 * **Apache Airflow:** Manages the **DAG (Directed Acyclic Graph)**.
     * *Sensors:* Airflow waits for files to land in MinIO before triggering Snowflake tasks.
     * *Operators:* Custom Python and dbt operators to manage task dependencies.
@@ -42,7 +42,7 @@ The entire infrastructure is **Containerized** and **Orchestrated**, simulating 
 
 ---
 
-## 📊 Pipeline Flow Logic
+##  Pipeline Flow Logic
 
 | Phase | Tool | Responsibility |
 | :--- | :--- | :--- |
@@ -54,7 +54,7 @@ The entire infrastructure is **Containerized** and **Orchestrated**, simulating 
 
 ---
 
-## 🚦 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Docker & Docker Compose
